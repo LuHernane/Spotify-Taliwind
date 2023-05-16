@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Mix() {
+export default function Mix({ name, url }: { name: string; url?: string }) {
   return (
     <a
       href=""
