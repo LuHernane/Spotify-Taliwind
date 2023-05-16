@@ -14,8 +14,8 @@ const entries = [
 export default function DailyMix() {
   return (
     <div className="grid grid-cols-8 gap-4 mt-4">
-      {entries.map((entry) => (
-        <Mix name={entry.name} key={entry.id} url={entry.url} />
+      {entries.map((entry, index) => (
+        <Mix name={entry.name} key={entry.id} url={entry.url} index={index} />
       ))}
     </div>
   );

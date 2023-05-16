@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-export default function Mix({ name, url }: { name: string; url?: string }) {
+export default function Mix({
+  name,
+  url,
+  index,
+}: {
+  name: string;
+  url?: string;
+  index: number;
+}) {
   return (
     <a
       href=""
@@ -13,7 +21,7 @@ export default function Mix({ name, url }: { name: string; url?: string }) {
         height={120}
         alt="LetoDie"
       />
-      <strong className="font-semibold"> Daily Mix 1</strong>
+      <strong className="font-semibold"> Daily Mix {index + 1}</strong>
       <span className="text-xs text-zinc-500">{name}</span>
     </a>
   );
