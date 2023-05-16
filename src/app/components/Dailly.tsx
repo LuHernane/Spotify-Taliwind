@@ -8,7 +8,7 @@ const entries = [
   {
     name: "Top Sertanejo",
     id: 2,
-    url: "",
+    url: "/OIP.jfif",
   },
 ];
 export default function DailyMix() {
