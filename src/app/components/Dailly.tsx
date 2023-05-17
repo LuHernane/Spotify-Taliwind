@@ -10,6 +10,11 @@ const entries = [
     id: 2,
     url: "/OIP.jfif",
   },
+  {
+    name: "Top Rap",
+    id: 3,
+    url: "/rap.jpg",
+  },
 ];
 export default function DailyMix() {
   return (
