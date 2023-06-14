@@ -4,7 +4,9 @@ usuario
 - email
 - password
 - nome
-  musicas
+
+musicas
+
 - álbum id
 - nome da música
 - cantor id
@@ -17,9 +19,19 @@ usuario
 -nome
 -ano do álbum
 -cantor id
--categoria
+-categoria id
+
 Cantor
 
 - categoria id
 - nome
-  -categoria
+
+categoria
+
+- Nome
+
+Dailly
+-músicas
+-mix
+
+-musicas mais ouvidas

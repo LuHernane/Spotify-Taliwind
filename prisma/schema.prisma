@@ -15,3 +15,58 @@ model Admin {
   email           String @unique
   password_digest String
 }
+
+model User {
+  id              Int        @id @default(autoincrement())
+  name            String
+  email           String     @unique
+  password_digest String
+  Playlist        Playlist[]
+}
+
+model Category {
+  id     Int      @id @default(autoincrement())
+  name   String   @unique
+  Music  Music[]
+  Author Author[]
+  Albun  Albun[]
+}
+
+model Music {
+  id         Int        @id @default(autoincrement())
+  name       String
+  category   Category   @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  author     Author     @relation(fields: [authorId], references: [id])
+  authorId   Int
+  videoId    String
+  albun      Albun[]
+  playlist   Playlist[]
+}
+
+model Author {
+  id         Int      @id @default(autoincrement())
+  name       String
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  Music      Music[]
+  Albun      Albun[]
+}
+
+model Albun {
+  id         Int      @id @default(autoincrement())
+  name       String
+  age        DateTime
+  author     Author   @relation(fields: [authorId], references: [id])
+  authorId   Int
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  music      Music[]
+}
+
+model Playlist {
+  id     Int     @id @default(autoincrement())
+  music  Music[]
+  user   User    @relation(fields: [userId], references: [id])
+  userId Int
+}
